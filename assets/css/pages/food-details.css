@@ -1,0 +1,176 @@
+/* === BITEBUDDY FOOD DETAILS SPECIFIC STYLES === */
+/* --- Food Detail Layout --- */
+.food-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.food-detail .food-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.food-detail .food-image .img-placeholder {
+    min-height: 400px;
+}
+
+.food-detail .food-info h1 {
+    margin-bottom: 4px;
+}
+
+.food-detail .food-info .food-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.food-detail .food-info .food-description {
+    margin-bottom: 20px;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.food-detail .food-info .food-price-lg {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.food-detail .food-info .quantity-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.food-detail .food-info .quantity-row label {
+    font-weight: 600;
+}
+
+.food-detail .food-info .quantity-row select {
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.food-detail .ingredients-list {
+    margin-bottom: 20px;
+}
+
+.food-detail .ingredients-list h3 {
+    margin-bottom: 8px;
+}
+
+.food-detail .ingredients-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.food-detail .ingredients-list ul li {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    color: var(--text);
+}
+
+/* --- Nutrition Table --- */
+.nutrition-table {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+    padding: 10px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9375rem;
+}
+
+.nutrition-table th {
+    font-weight: 600;
+    color: var(--dark);
+    background-color: var(--background);
+}
+
+.nutrition-table td:last-child {
+    font-weight: 600;
+    text-align: right;
+}
+
+
+/* --- Quantity Stepper (+ - buttons) --- */
+.qty-stepper {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    overflow: hidden;
+}
+
+.qty-btn {
+    background: var(--background);
+    border: none;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+}
+
+.qty-btn:hover {
+    background: var(--border);
+}
+
+.qty-input {
+    width: 36px;
+    height: 32px;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--dark);
+    outline: none;
+}
+
+/* In-Card Quantity Controller */
+.in-cart-ctrl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary);
+    border-radius: var(--radius);
+    padding: 4px 8px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.in-cart-ctrl button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+

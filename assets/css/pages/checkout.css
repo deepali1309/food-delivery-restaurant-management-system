@@ -1,0 +1,195 @@
+/* === BITEBUDDY CHECKOUT & ORDER CONFIRMATION STYLES === */
+/* --- Checkout Layout --- */
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* --- Payment Method --- */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color var(--transition);
+}
+
+.payment-method:hover {
+    border-color: var(--primary);
+}
+
+.payment-method input[type="radio"] {
+    accent-color: var(--primary);
+}
+
+.payment-method label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+/* --- Success Page --- */
+.success-page {
+    text-align: center;
+    padding: 80px 24px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-full);
+    background-color: var(--success-light);
+    color: var(--success);
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    border: 3px solid var(--success);
+}
+
+.success-page h1 {
+    color: var(--success);
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+}
+
+.success-page .order-id {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 16px;
+}
+
+.success-page .delivery-estimate {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.success-page .delivery-estimate .est-label {
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.success-page .delivery-estimate .est-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.success-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+
+/* --- Live Order Progress Stepper --- */
+.order-tracking-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.order-stepper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 32px 0 20px;
+}
+
+.order-stepper::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background: var(--border);
+    z-index: 1;
+}
+
+.order-stepper-progress {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    height: 4px;
+    background: var(--success);
+    z-index: 2;
+    transition: width 0.5s ease;
+}
+
+.step-node {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+}
+
+.step-icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.step-node.completed .step-icon-circle {
+    background: var(--success);
+    border-color: var(--success);
+    color: var(--white);
+}
+
+.step-node.active .step-icon-circle {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 0 0 6px var(--primary-light);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(232, 93, 4, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(232, 93, 4, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(232, 93, 4, 0); }
+}
+
+.step-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.step-time {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+

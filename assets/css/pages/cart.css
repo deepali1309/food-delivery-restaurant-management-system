@@ -1,0 +1,129 @@
+/* === BITEBUDDY SHOPPING CART STYLES === */
+/* --- Order Summary --- */
+.order-summary {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.order-summary h3 {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.order-summary .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.9375rem;
+}
+
+.order-summary .summary-row.total {
+    border-top: 2px solid var(--dark);
+    margin-top: 8px;
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--dark);
+}
+
+.order-summary .summary-row .label {
+    color: var(--muted);
+}
+
+.order-summary .summary-row .value {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.order-summary .summary-row.discount .value {
+    color: var(--success);
+}
+
+/* --- Cart Item --- */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item .cart-item-img {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cart-item .cart-item-img .img-placeholder {
+    width: 100%;
+    height: 100%;
+    font-size: 1.25rem;
+}
+
+.cart-item .cart-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cart-item .cart-item-info {
+    flex: 1;
+}
+
+.cart-item .cart-item-info h4 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.cart-item .cart-item-info .cart-item-restaurant {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
+
+.cart-item .cart-item-info .cart-item-price {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.cart-item .cart-item-qty {
+    text-align: center;
+}
+
+.cart-item .cart-item-qty select {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font-family);
+    font-size: 0.9375rem;
+}
+
+.cart-item .cart-item-total {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--dark);
+    min-width: 70px;
+    text-align: right;
+}
+
+.cart-item .cart-item-remove {
+    color: var(--danger);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: var(--font-family);
+    padding: 4px 8px;
+}
+

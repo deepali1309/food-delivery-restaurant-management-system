@@ -1,0 +1,520 @@
+/* === BITEBUDDY MODALS, ALERTS, TOASTS & FEEDBACK === */
+/* --- Badges --- */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.badge-success {
+    background-color: var(--success-light);
+    color: var(--success);
+}
+
+.badge-warning {
+    background-color: var(--warning-light);
+    color: #B45309;
+}
+
+.badge-danger {
+    background-color: var(--danger-light);
+    color: var(--danger);
+}
+
+.badge-info {
+    background-color: var(--info-light);
+    color: var(--info);
+}
+
+.badge-primary {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.badge-secondary {
+    background-color: var(--background);
+    color: var(--muted);
+}
+
+/* --- Alerts --- */
+.alert {
+    padding: 14px 20px;
+    border-radius: var(--radius);
+    font-size: 0.9375rem;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.alert-success {
+    background-color: var(--success-light);
+    color: #166534;
+    border-color: #BBF7D0;
+}
+
+.alert-warning {
+    background-color: var(--warning-light);
+    color: #92400E;
+    border-color: #FDE68A;
+}
+
+.alert-danger {
+    background-color: var(--danger-light);
+    color: #991B1B;
+    border-color: #FECACA;
+}
+
+.alert-info {
+    background-color: var(--info-light);
+    color: #1E40AF;
+    border-color: #BFDBFE;
+}
+
+/* --- Empty State --- */
+.empty-state {
+    text-align: center;
+    padding: 60px 24px;
+}
+
+.empty-state .empty-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: var(--muted);
+    max-width: 400px;
+    margin: 0 auto 24px;
+}
+
+/* --- Star Rating --- */
+.stars {
+    color: var(--warning);
+    font-size: 0.9375rem;
+    letter-spacing: 1px;
+}
+
+.stars .star-empty {
+    color: var(--border-dark);
+}
+
+
+/* --- Toast Notification System --- */
+#toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+    pointer-events: none;
+    max-width: 380px;
+    width: calc(100% - 48px);
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: var(--white);
+    color: var(--dark);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary);
+    pointer-events: auto;
+    animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    font-size: 0.9375rem;
+}
+
+.toast.toast-success { border-left-color: var(--success); }
+.toast.toast-danger { border-left-color: var(--danger); }
+.toast.toast-warning { border-left-color: var(--warning); }
+.toast.toast-info { border-left-color: var(--info); }
+
+.toast-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 2px;
+}
+
+.toast-message {
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 2px;
+    line-height: 1;
+}
+
+.toast-close:hover {
+    color: var(--dark);
+}
+
+.toast.hiding {
+    animation: slideOutRight 0.25s ease forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Empty State Box --- */
+.empty-state-box {
+    text-align: center;
+    padding: 48px 24px;
+    background: var(--white);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+}
+
+.empty-state-icon {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.empty-state-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.empty-state-desc {
+    color: var(--muted);
+    font-size: 0.9375rem;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dietary Badges */
+.diet-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.diet-veg {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.diet-nonveg {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* Modal Popup */
+.dom-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    padding: 16px;
+}
+
+.dom-modal-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dom-modal-content {
+    background: var(--white);
+    border-radius: var(--radius);
+    max-width: 520px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 24px;
+}
+
+.dom-modal-backdrop.show .dom-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.dom-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.dom-modal-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.dom-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--muted);
+}
+
+
+/* ==========================================================================
+   Added to Cart Popup Notification Modal / Floating Banner
+   ========================================================================== */
+.cart-popup-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 420px;
+    width: calc(100% - 48px);
+    pointer-events: none;
+}
+
+@media (max-width: 480px) {
+    .cart-popup-container {
+        top: 16px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+    }
+}
+
+.cart-popup-card {
+    pointer-events: auto;
+    background: #ffffff;
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid var(--success, #22c55e);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: cartPopupSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+@keyframes cartPopupSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.cart-popup-card.hiding {
+    animation: cartPopupSlideOut 0.25s ease forwards;
+}
+
+@keyframes cartPopupSlideOut {
+    to {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.96);
+    }
+}
+
+.cart-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #16a34a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cart-popup-header .header-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-popup-header .check-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #dcfce7;
+    color: #16a34a;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.cart-popup-close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.15s ease, background 0.15s ease;
+}
+
+.cart-popup-close:hover {
+    color: #0f172a;
+    background: #f1f5f9;
+}
+
+.cart-popup-body {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cart-popup-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.cart-popup-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-popup-title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--dark, #0f172a);
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-popup-details {
+    font-size: 0.8125rem;
+    color: var(--text-light, #64748b);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-popup-price {
+    font-weight: 700;
+    color: var(--primary, #ea580c);
+}
+
+.cart-popup-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.cart-popup-summary {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.cart-popup-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary, #ea580c);
+    color: #ffffff !important;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.cart-popup-btn:hover {
+    background: var(--primary-dark, #c2410c);
+    transform: translateY(-1px);
+}

@@ -1,0 +1,310 @@
+/* === BITEBUDDY CARD COMPONENTS === */
+/* --- Cards --- */
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Restaurant Card */
+.restaurant-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.restaurant-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.restaurant-card .card-img {
+    height: 180px;
+    overflow: hidden;
+}
+
+.restaurant-card .card-img .img-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.restaurant-card .card-img img,
+.food-card .card-img img,
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition);
+}
+
+.restaurant-card:hover .card-img img,
+.food-card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+.restaurant-card .card-body {
+    padding: 16px;
+}
+
+.restaurant-card .card-body h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.restaurant-card .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.restaurant-card .card-meta .rating {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+.restaurant-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+/* Food Card */
+.food-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.food-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.food-card .card-img {
+    height: 170px;
+    overflow: hidden;
+}
+
+.food-card .card-img .img-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.food-card .card-body {
+    padding: 16px;
+}
+
+.food-card .card-body h3 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.food-card .card-body .food-restaurant {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.food-card .card-body .food-price {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.food-card .card-body .food-rating {
+    font-size: 0.8125rem;
+    color: var(--warning);
+    margin-bottom: 12px;
+}
+
+.food-card .card-actions {
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 16px;
+}
+
+.food-card .card-actions .btn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 0.8125rem;
+}
+
+/* Stat Card */
+.stat-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-card .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.stat-card .stat-icon.primary {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.stat-card .stat-icon.success {
+    background-color: var(--success-light);
+    color: var(--success);
+}
+
+.stat-card .stat-icon.info {
+    background-color: var(--info-light);
+    color: var(--info);
+}
+
+.stat-card .stat-icon.warning {
+    background-color: var(--warning-light);
+    color: var(--warning);
+}
+
+.stat-card .stat-icon.danger {
+    background-color: var(--danger-light);
+    color: var(--danger);
+}
+
+.stat-card .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.stat-card .stat-label {
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+/* Feature Card */
+.feature-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition);
+}
+
+.feature-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.feature-card .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+
+/* --- Order Card --- */
+.order-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.order-card .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.order-card .order-header h4 {
+    margin-bottom: 0;
+}
+
+.order-card .order-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    font-size: 0.9375rem;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.order-card .order-details .detail-label {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    margin-bottom: 2px;
+}
+
+.order-card .order-details .detail-value {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+
+/* --- Review Card --- */
+.review-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.review-card .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.review-card .review-body {
+    font-size: 0.9375rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+

@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/admin-dashboard/(.*)", "destination": "/dashboards/admin/$1" },
+    { "source": "/admin-dashboard", "destination": "/dashboards/admin/index.html" },
+    { "source": "/restaurant-dashboard/(.*)", "destination": "/dashboards/restaurant/$1" },
+    { "source": "/restaurant-dashboard", "destination": "/dashboards/restaurant/index.html" },
+    { "source": "/css/(.*)", "destination": "/assets/css/$1" },
+    { "source": "/js/(.*)", "destination": "/assets/js/$1" },
+    { "source": "/images/(.*)", "destination": "/assets/images/$1" },
+    { "source": "/about", "destination": "/pages/about.html" },
+    { "source": "/restaurants", "destination": "/pages/restaurants.html" },
+    { "source": "/restaurant-details", "destination": "/pages/restaurant-details.html" },
+    { "source": "/food-menu", "destination": "/pages/food-menu.html" },
+    { "source": "/food-details", "destination": "/pages/food-details.html" },
+    { "source": "/cart", "destination": "/pages/cart.html" },
+    { "source": "/checkout", "destination": "/pages/checkout.html" },
+    { "source": "/order-confirmation", "destination": "/pages/order-confirmation.html" },
+    { "source": "/my-orders", "destination": "/pages/my-orders.html" },
+    { "source": "/login", "destination": "/pages/login.html" },
+    { "source": "/register", "destination": "/pages/register.html" },
+    { "source": "/profile", "destination": "/pages/profile.html" },
+    { "source": "/(.*)\\.html", "destination": "/pages/$1.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}
+

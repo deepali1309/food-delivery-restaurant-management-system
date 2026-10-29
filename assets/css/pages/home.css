@@ -1,0 +1,172 @@
+/* === BITEBUDDY HOMEPAGE SPECIFIC STYLES === */
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url("../images/banners/hero-food.jpg") center/cover no-repeat;
+    padding: 88px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.75rem;
+    margin-bottom: 16px;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #E5E7EB;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.hero-search {
+    display: flex;
+    max-width: 520px;
+    margin: 0 auto 24px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero-search input {
+    flex: 1;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    outline: none;
+}
+
+.hero-search button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition: background-color var(--transition);
+}
+
+.hero-search button:hover {
+    background-color: var(--primary-hover);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+
+/* --- How It Works Steps --- */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: center;
+}
+
+.step-item .step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.step-item h3 {
+    margin-bottom: 8px;
+}
+
+.step-item p {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+
+/* --- Hero Search Autocomplete Suggestions --- */
+.hero-search-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+.search-suggestions-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    max-height: 320px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    text-align: left;
+}
+
+.search-suggestions-dropdown.show {
+    display: block;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background: var(--primary-light);
+}
+
+.suggestion-img {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+}
+
+.suggestion-info {
+    flex: 1;
+}
+
+.suggestion-title {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--dark);
+}
+
+.suggestion-sub {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.suggestion-price {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.875rem;
+}
+

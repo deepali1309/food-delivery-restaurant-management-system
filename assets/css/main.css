@@ -1,0 +1,239 @@
+/* ==========================================================================
+   BiteBuddy — Master Stylesheet Coordinator
+   Organized into Base, Components, Pages, Dashboards, and Responsive Layers
+   ========================================================================== */
+
+/* --- Base Layer --- */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+
+/* --- Shared Layout, Footer & Utilities --- */
+/* --- Layout --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header p {
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gap-1 {
+    gap: 8px;
+}
+
+.gap-2 {
+    gap: 16px;
+}
+
+
+/* --- Page Header (breadcrumb pages) --- */
+.page-header {
+    background: linear-gradient(135deg, #FEF3E2 0%, #FFF7ED 100%);
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-header h1 {
+    margin-bottom: 4px;
+}
+
+.page-header p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.breadcrumb a {
+    color: var(--muted);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.breadcrumb span {
+    color: var(--text);
+    font-weight: 500;
+}
+
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--dark);
+    color: #D1D5DB;
+    padding: 48px 0 0;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #374151;
+}
+
+.footer-about .logo {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.footer-about .logo span {
+    color: var(--white);
+}
+
+.footer-about p {
+    color: #9CA3AF;
+    font-size: 0.9375rem;
+}
+
+.footer-section h4 {
+    color: var(--white);
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #9CA3AF;
+    font-size: 0.9375rem;
+    transition: color var(--transition);
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+/* --- Image Placeholders --- */
+.img-placeholder {
+    background: linear-gradient(135deg, #FED7AA 0%, #FDBA74 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 2rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+}
+
+.img-placeholder.restaurant {
+    background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 50%, #FED7AA 100%);
+    min-height: 180px;
+}
+
+.img-placeholder.food {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #FDBA74 100%);
+    min-height: 180px;
+}
+
+.img-placeholder.avatar {
+    background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%);
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-full);
+    font-size: 1.5rem;
+}
+
+.img-placeholder.banner {
+    background: linear-gradient(135deg, #FEF3E2 0%, #FDBA74 50%, #F97316 100%);
+    min-height: 200px;
+}
+
+/* --- Utility --- */
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.mb-4 { margin-bottom: 32px; }
+
+.hidden {
+    display: none;
+}
+
+
+/* --- Components Layer --- */
+@import url("components/navbar.css");
+@import url("components/buttons.css");
+@import url("components/forms.css");
+@import url("components/cards.css");
+@import url("components/modals.css");
+
+/* --- Page Layouts Layer --- */
+@import url("pages/home.css");
+@import url("pages/restaurants.css");
+@import url("pages/food-details.css");
+@import url("pages/cart.css");
+@import url("pages/checkout.css");
+
+/* --- Dashboards Layer --- */
+@import url("dashboards/admin.css");
+
+/* --- Responsive Breakpoints Layer --- */
+@import url("responsive.css");
